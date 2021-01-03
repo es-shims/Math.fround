@@ -1,0 +1,37 @@
+{
+	"root": true,
+
+	"extends": "@ljharb",
+
+	"rules": {
+		"array-bracket-newline": 0,
+		"func-name-matching": 0,
+		"id-length": 0,
+		"max-statements": 0,
+		"new-cap": [2, {
+			"capIsNewExceptions": [
+			],
+		}],
+		"no-magic-numbers": [2, {
+			"ignore": [0, 1, 2]
+		}],
+		"no-negated-condition": 0,
+		"operator-linebreak": [2, "before"],
+	},
+
+	"overrides": [
+		{
+			"files": "**/*.mjs",
+			"rules": {
+				"no-restricted-exports": 0,
+			},
+		},
+		{
+			"files": "test/**/*",
+			"rules": {
+				"max-lines-per-function": 0,
+				"no-magic-numbers": 0,
+			},
+		}
+	]
+}
