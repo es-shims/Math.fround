@@ -10,10 +10,12 @@
 		"max-statements": 0,
 		"new-cap": [2, {
 			"capIsNewExceptions": [
+				"Call",
+				"ToUint32"
 			],
 		}],
 		"no-magic-numbers": [2, {
-			"ignore": [0, 1, 2]
+			"ignore": [0, 1, -1]
 		}],
 		"no-negated-condition": 0,
 		"operator-linebreak": [2, "before"],
