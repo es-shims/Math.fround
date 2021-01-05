@@ -28,14 +28,14 @@ console.log(Math.fround(2 ** 150)); // Infinity
 ## Tests
 Simply clone the repo, `npm install`, and run `npm test`
 
-[package-url]: https://npmjs.org/package/es-shims/math.fround
-[npm-version-svg]: https://versionbadg.es/es-shims/math.fround.svg
-[deps-svg]: https://david-dm.org/es-shims/math.fround.svg
-[deps-url]: https://david-dm.org/es-shims/math.fround
-[dev-deps-svg]: https://david-dm.org/es-shims/math.fround/dev-status.svg
-[dev-deps-url]: https://david-dm.org/es-shims/math.fround#info=devDependencies
-[npm-badge-png]: https://nodei.co/npm/es-shims/math.fround.png?downloads=true&stars=true
-[license-image]: https://img.shields.io/npm/l/es-shims/math.fround.svg
+[package-url]: https://npmjs.org/package/math.fround
+[npm-version-svg]: https://versionbadg.es/es-shims/Math.fround.svg
+[deps-svg]: https://david-dm.org/es-shims/Math.fround.svg
+[deps-url]: https://david-dm.org/es-shims/Math.fround
+[dev-deps-svg]: https://david-dm.org/es-shims/Math.fround/dev-status.svg
+[dev-deps-url]: https://david-dm.org/es-shims/Math.fround#info=devDependencies
+[npm-badge-png]: https://nodei.co/npm/math.fround.png?downloads=true&stars=true
+[license-image]: https://img.shields.io/npm/l/math.fround.svg
 [license-url]: LICENSE
-[downloads-image]: https://img.shields.io/npm/dm/es-shims/math.fround.svg
-[downloads-url]: https://npm-stat.com/charts.html?package=es-shims/math.fround
+[downloads-image]: https://img.shields.io/npm/dm/math.fround.svg
+[downloads-url]: https://npm-stat.com/charts.html?package=math.fround
