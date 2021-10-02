@@ -74,17 +74,17 @@
   },
   "homepage": "https://github.com/es-shims/Math.fround#readme",
   "devDependencies": {
-    "@es-shims/api": "^2.1.2",
-    "@ljharb/eslint-config": "^17.3.0",
-    "aud": "^1.1.3",
-    "auto-changelog": "^2.2.1",
-    "eslint": "^7.17.0",
+    "@es-shims/api": "^2.2.1",
+    "@ljharb/eslint-config": "^18.0.0",
+    "aud": "^1.1.5",
+    "auto-changelog": "^2.3.0",
+    "eslint": "^7.32.0",
     "functions-have-names": "^1.2.2",
     "has-strict-mode": "^1.0.1",
     "nyc": "^10.3.2",
     "reflect.ownkeys": "^1.0.2",
     "safe-publish-latest": "^1.1.4",
-    "tape": "^5.1.1"
+    "tape": "^5.3.1"
   },
   "dependencies": {
     "call-bind": "^1.0.0",
