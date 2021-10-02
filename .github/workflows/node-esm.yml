@@ -11,6 +11,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
+          - node-version: 'lts/*'
           - node-version: '14.13'
           - node-version: '13.7'
           - node-version: '12.17'
