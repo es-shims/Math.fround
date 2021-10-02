@@ -16,9 +16,9 @@ test('named exports', async (t) => {
 	);
 
 	const { shim, getPolyfill, implementation } = froundModule;
-	t.equal(await import('math.fround/shim'), shim, 'shim named export matches deep export');
-	t.equal(await import('math.fround/implementation'), implementation, 'implementation named export matches deep export');
-	t.equal(await import('math.fround/polyfill'), getPolyfill, 'getPolyfill named export matches deep export');
+	t.equal((await import('math.fround/shim')).default, shim, 'shim named export matches deep export');
+	t.equal((await import('math.fround/implementation')).default, implementation, 'implementation named export matches deep export');
+	t.equal((await import('math.fround/polyfill')).default, getPolyfill, 'getPolyfill named export matches deep export');
 
 	t.end();
 });
