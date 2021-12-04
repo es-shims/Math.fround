@@ -18,16 +18,10 @@
 			"ignore": [0, 1, -1]
 		}],
 		"no-negated-condition": 0,
-		"operator-linebreak": [2, "before"],
+		//"operator-linebreak": [2, "before"],
 	},
 
 	"overrides": [
-		{
-			"files": "**/*.mjs",
-			"rules": {
-				"no-restricted-exports": 0,
-			},
-		},
 		{
 			"files": "test/**/*",
 			"rules": {

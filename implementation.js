@@ -25,6 +25,7 @@ module.exports = function fround(x) {
 	var s = v < 0 ? -1 : 1;
 	var mod = abs(v);
 	if (mod < BINARY_32_MIN_VALUE) {
+		/* eslint operator-linebreak: [2, "before"] */
 		return (
 			s
 			* roundTiesToEven(mod / BINARY_32_MIN_VALUE / BINARY_32_EPSILON)
