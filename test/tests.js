@@ -50,6 +50,10 @@ module.exports = function (fround, t) {
 		st.equal(fround(maxFloat32), maxFloat32, 'fround(maxFloat32)');
 		st.equal(fround(-maxFloat32), -maxFloat32, 'fround(-maxFloat32)');
 
+		var maxValueThatRoundsDownToMaxFloat32 = 3.4028235677973362e+38;
+		st.equal(fround(maxValueThatRoundsDownToMaxFloat32), maxFloat32, 'fround(maxValueThatRoundsDownToMaxFloat32)');
+		st.equal(fround(-maxValueThatRoundsDownToMaxFloat32), -maxFloat32, 'fround(-maxValueThatRoundsDownToMaxFloat32)');
+
 		// round-nearest rounds down to maxFloat32
 		st.equal(fround(maxFloat32 + Math.pow(2, Math.pow(2, 8 - 1) - 1 - 23 - 2)), maxFloat32, 'fround(maxFloat32 + pow(2, pow(2, 8 - 1) - 1 - 23 - 2))');
 		st.end();
@@ -63,6 +67,18 @@ module.exports = function (fround, t) {
 		st.equal(fround(-minFloat32 / 2), -0, 'fround(-minFloat32 / 2)');
 		st.equal(fround((minFloat32 / 2) + Math.pow(2, -202)), minFloat32, 'fround((minFloat32 / 2) + pow(2, -202))');
 		st.equal(fround((-minFloat32 / 2) - Math.pow(2, -202)), -minFloat32, 'fround((-minFloat32 / 2) - pow(2, -202))');
+		st.end();
+	});
+
+	t.test('rounds properly with the subnormal-normal boundary', function (st) {
+		var maxSubnormal32 = 1.1754942106924411e-38;
+		var minNormal32 = 1.1754943508222875e-38;
+		st.equal(fround(1.1754942807573642e-38), maxSubnormal32, 'fround(1.1754942807573642e-38)');
+		st.equal(fround(1.1754942807573643e-38), minNormal32, 'fround(1.1754942807573643e-38)');
+		st.equal(fround(1.1754942807573644e-38), minNormal32, 'fround(1.1754942807573644e-38)');
+		st.equal(fround(-1.1754942807573642e-38), -maxSubnormal32, 'fround(-1.1754942807573642e-38)');
+		st.equal(fround(-1.1754942807573643e-38), -minNormal32, 'fround(-1.1754942807573643e-38)');
+		st.equal(fround(-1.1754942807573644e-38), -minNormal32, 'fround(-1.1754942807573644e-38)');
 		st.end();
 	});
 };
