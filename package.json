@@ -1,83 +1,83 @@
 {
-  "name": "math.fround",
-  "version": "1.0.1",
-  "description": "An ES-spec-compliant Math.fround shim/polyfill/replacement that works as far down as ES3",
-  "main": "index.js",
-  "exports": {
-    ".": [
-      {
-        "import": "./index.mjs",
-        "require": "./index.js",
-        "default": "./index.js"
-      },
-      "./index.js"
-    ],
-    "./polyfill": "./polyfill.js",
-    "./implementation": "./implementation.js",
-    "./shim": "./shim.js",
-    "./auto": "./auto.js",
-    "./package.json": "./package.json"
-  },
-  "scripts": {
-    "prepublishOnly": "safe-publish-latest",
-    "prepublish": "not-in-publish || npm run prepublishOnly",
-    "pretest": "npm run lint",
-    "lint": "eslint --ext=js,mjs .",
-    "postlint": "es-shim-api --bound",
-    "tests-only": "nyc tape 'test/**/*.js'",
-    "tests-esm": "nyc node test/index.mjs",
-    "test": "npm run tests-only && npm run tests-esm",
-    "posttest": "aud --production",
-    "version": "auto-changelog && git add CHANGELOG.md",
-    "postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/es-shims/Math.fround.git"
-  },
-  "keywords": [
-    "Math",
-    "fround",
-    "Math.fround",
-    "shim",
-    "polyfill",
-    "es-shim",
-    "API"
-  ],
-  "author": "Nicolò Ribaudo <nicolo.ribaudo@gmail.com>",
-  "funding": {
-    "url": "https://github.com/es-shims/Math.fround?sponsor=1"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/es-shims/Math.fround/issues"
-  },
-  "homepage": "https://github.com/es-shims/Math.fround#readme",
-  "devDependencies": {
-    "@es-shims/api": "^2.2.3",
-    "@ljharb/eslint-config": "^20.0.0",
-    "aud": "^1.1.5",
-    "auto-changelog": "^2.3.0",
-    "eslint": "^8.4.1",
-    "functions-have-names": "^1.2.2",
-    "has-strict-mode": "^1.0.1",
-    "in-publish": "^2.0.1",
-    "nyc": "^10.3.2",
-    "reflect.ownkeys": "^1.1.0",
-    "safe-publish-latest": "^2.0.0",
-    "tape": "^5.3.2"
-  },
-  "dependencies": {
-    "call-bind": "^1.0.2",
-    "define-properties": "^1.1.3",
-    "is-nan": "^1.3.2"
-  },
-  "auto-changelog": {
-    "output": "CHANGELOG.md",
-    "template": "keepachangelog",
-    "unreleased": false,
-    "commitLimit": false,
-    "backfillLimit": false,
-    "hideCredit": true
-  }
+	"name": "math.fround",
+	"version": "1.0.1",
+	"description": "An ES-spec-compliant Math.fround shim/polyfill/replacement that works as far down as ES3",
+	"main": "index.js",
+	"exports": {
+		".": [
+			{
+				"import": "./index.mjs",
+				"require": "./index.js",
+				"default": "./index.js"
+			},
+			"./index.js"
+		],
+		"./polyfill": "./polyfill.js",
+		"./implementation": "./implementation.js",
+		"./shim": "./shim.js",
+		"./auto": "./auto.js",
+		"./package.json": "./package.json"
+	},
+	"scripts": {
+		"prepublishOnly": "safe-publish-latest",
+		"prepublish": "not-in-publish || npm run prepublishOnly",
+		"pretest": "npm run lint",
+		"lint": "eslint --ext=js,mjs .",
+		"postlint": "es-shim-api --bound",
+		"tests-only": "nyc tape 'test/**/*.js'",
+		"tests-esm": "nyc node test/index.mjs",
+		"test": "npm run tests-only && npm run tests-esm",
+		"posttest": "aud --production",
+		"version": "auto-changelog && git add CHANGELOG.md",
+		"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/es-shims/Math.fround.git"
+	},
+	"keywords": [
+		"Math",
+		"fround",
+		"Math.fround",
+		"shim",
+		"polyfill",
+		"es-shim",
+		"API"
+	],
+	"author": "Nicolò Ribaudo <nicolo.ribaudo@gmail.com>",
+	"funding": {
+		"url": "https://github.com/es-shims/Math.fround?sponsor=1"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/es-shims/Math.fround/issues"
+	},
+	"homepage": "https://github.com/es-shims/Math.fround#readme",
+	"devDependencies": {
+		"@es-shims/api": "^2.2.3",
+		"@ljharb/eslint-config": "^20.0.0",
+		"aud": "^1.1.5",
+		"auto-changelog": "^2.3.0",
+		"eslint": "^8.4.1",
+		"functions-have-names": "^1.2.2",
+		"has-strict-mode": "^1.0.1",
+		"in-publish": "^2.0.1",
+		"nyc": "^10.3.2",
+		"reflect.ownkeys": "^1.1.0",
+		"safe-publish-latest": "^2.0.0",
+		"tape": "^5.3.2"
+	},
+	"dependencies": {
+		"call-bind": "^1.0.2",
+		"define-properties": "^1.1.3",
+		"is-nan": "^1.3.2"
+	},
+	"auto-changelog": {
+		"output": "CHANGELOG.md",
+		"template": "keepachangelog",
+		"unreleased": false,
+		"commitLimit": false,
+		"backfillLimit": false,
+		"hideCredit": true
+	}
 }
